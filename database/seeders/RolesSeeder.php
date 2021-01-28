@@ -4,6 +4,7 @@ namespace Database\Seeders;
 use Illuminate\Database\Seeder;
 use App\Models\Role;
 use App\Models\User;
+use Illuminate\Support\Facades\Hash;
 
 class RolesSeeder extends Seeder
 {
@@ -21,7 +22,7 @@ class RolesSeeder extends Seeder
             'name'=>'kike',
             'lastname'=>'viera',
             'email'=>'kikero0502@gmail.com',
-            'password'=>'321'
+            'password'=>Hash::make('password123'),
             ]);
         $roles = [
             new Role(['rol_name'=>'admin']),
